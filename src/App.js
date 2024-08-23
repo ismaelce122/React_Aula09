@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import { useState } from 'react'
 import Catalogo from './pages/catalogo'
+import Carrinho from './pages/carrinho'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       </ul>
       <Routes>
         <Route path='/' element= { <Catalogo addToCart={addToCart} /> } />
+        <Route path='/cart' element= { <Carrinho cart= {cart} /> } />
       </Routes>
     </Router>
   );
